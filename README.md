@@ -15,7 +15,19 @@ $$f(x) = \frac{1}{\sqrt{2π}σ}e^{-\frac{(x-μ)^2}{2σ^{2}}} \tag{2}$$
 
 Here, $\sigma$ represents the variance of the Gaussian function, and $\mu$ represents the mean. Mathematically, it means shifting the standard Gaussian function to the right by $\mu$ units, stretching the function's width by a factor of $\sigma$. In order to ensure that the probability density function integrates to 1, the height of $f(x)$ decreases, which is reflected in dividing the denominator by $\sigma$.
 
-We consider $n$ independent variables, each following a normal distribution and being mutually uncorrelated, represented as $x = \left[ \begin{matrix} x_{1}, x_{2},\cdots,x_{n}\end{matrix}\right]^\mathrm{T}$, with a mean of $E(x) = \left[ \begin{matrix} μ_{1}, μ_{2},\cdots,μ_{n}\end{matrix}\right]^\mathrm{T}$ and a variance of $σ(x) = \left[ \begin{matrix} σ_{1}, σ_{2},\cdots,σ_{n}\end{matrix}\right]^\mathrm{T}$. In this case, according to the probability density formula in probability theory, we have:
+We consider $n$ independent variables, each following a normal distribution and being mutually uncorrelated, represented as 
+
+$$x = \left[ \begin{matrix} x_{1}, x_{2},\cdots,x_{n}\end{matrix}\right]^\mathrm{T}$$,
+
+with a mean of 
+
+$$E(x) = \left[ \begin{matrix} μ_{1}, μ_{2},\cdots,μ_{n}\end{matrix}\right]^\mathrm{T}$$
+
+and a variance of 
+
+$$σ(x) = \left[ \begin{matrix} σ_{1}, σ_{2},\cdots,σ_{n}\end{matrix}\right]^\mathrm{T}$$.
+
+In this case, according to the probability density formula in probability theory, we have:
 
 $$f(x) = p(x_{1},x_{2}....x_{n}) = p(x_{1})p(x_{2})....p(x_{n}) = \frac{1}{(\sqrt{2π})^nσ_{1}σ_{2}\cdotsσ_{n}}e^{-\frac{(x_{1}-μ_{1})^2}{2σ_{1}^2}-\frac{(x_{2}-μ_{2})^2}{2σ_{2}^2}\cdots-\frac{(x_{n}-μ_{n})^2}{2σ_{n}^2}} \tag{3}$$
 
