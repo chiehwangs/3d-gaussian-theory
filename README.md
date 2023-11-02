@@ -102,7 +102,9 @@ m_{31} & m_{32} & m_{33} \\
 
 Reference《Real Time Rendering 3rd edition》：
 
-$$\begin{aligned}m_{32}-m_{23}&=(2yz+2xw)-(2yz-2xw)=4xw\\m_{13}-m_{31}&=(2xz+2yw)-(2xz-2yw)=4yw\\m_{21}-m_{12}&=(2xy+2zw)-(2xy-2zw)=4zw\end{aligned} \tag{15}$$
+$$\begin{aligned}m_{32}-m_{23}&=(2yz+2xw)-(2yz-2xw)=4xw \\
+m_{13}-m_{31}&=(2xz+2yw)-(2xz-2yw)=4yw \\
+m_{21}-m_{12}&=(2xy+2zw)-(2xy-2zw)=4zw\end{aligned} \tag{15}$$
 
 The trace of the rotation matrix $Q$ is given by $tr(Q) = m_{11} + m_{22} + m_{33}$, and based on the equation above, it can be derived that $tr(Q) = 4w^{2} - 1$, therefore, the quaternion $l = (w,x,y,z)$ obtained from the rotation matrix $Q$ is as follows:
 
