@@ -44,15 +44,24 @@ $$z^2 = z^\mathrm{T}z = \left[ \begin{array}{cccc} x_{1} - μ_{1} & x_{2} - μ_{
 
 $x - μ_{x}$ can be represented as $x - μ_{x} = \left[ \begin{matrix} x_{1} - μ_{1}, x_{2} - μ_{2}, \cdots,x_{n} - μ_{n} \end{matrix}\right]^\mathrm{T}$ , and at this point, $z^2$ can be represented as:
 
-$$[x - μ_{x}]^\mathrm{T}\left[ \begin{matrix} \frac{1}{σ_{1}^2}&0&\cdots&0\\ 0&\frac{1}{σ_{2}^2}&\cdots&0\\ \vdots&\cdots&\cdots&\vdots\\ 0&0&\cdots&\frac{1}{σ_{n}^2}  \end{matrix}\right][x - μ_{x}] \tag{6}$$
+$$[x - μ_{x}]^\mathrm{T}\left[ \begin{matrix} \frac{1}{σ_{1}^2}&0&\cdots&0 \\ 
+0&\frac{1}{σ_{2}^2}&\cdots&0 \\ 
+\vdots&\cdots&\cdots&\vdots \\ 
+0&0&\cdots&\frac{1}{σ_{n}^2}  \end{matrix}\right][x - μ_{x}] \tag{6}$$
 
 Mathematically, the covariance matrix $Σ$ is defined as, with its diagonal elements equal to the covariance between $x_i$ and $x_j$:
 
-$$∑_{}^{} = \left[ \begin{matrix} σ_{1}^2&0&\cdots&0\\ 0&σ_{2}^2&\cdots&0\\ \vdots&\cdots&\cdots&\vdots\\ 0&0&\cdots&σ_{n}^2  \end{matrix}\right] \tag{7}$$
+$$∑_{}^{} = \left[ \begin{matrix} σ_{1}^2&0&\cdots&0 \\ 
+0&σ_{2}^2&\cdots&0 \\ 
+\vdots&\cdots&\cdots&\vdots \\ 
+0&0&\cdots&σ_{n}^2  \end{matrix}\right] \tag{7}$$
 
 At this point, the variables are independent, so only diagonal elements exist, and these elements represent the covariance between $x_i$ and itself, which is also equal to the variance $\sigma^2$. $Σ$ is a diagonal matrix, and its inverse matrix is:
 
-$$( (∑_{}^{})^{-1} = \left[ \begin{matrix} \frac{1}{σ_{1}^2}&0&\cdots&0\\ 0&\frac{1}{σ_{2}^2}&\cdots&0\\ \vdots&\cdots&\cdots&\vdots\\ 0&0&\cdots&\frac{1}{σ_{n}^2}  \end{matrix}\right] \tag{8}$$
+$$( (∑_{}^{})^{-1} = \left[ \begin{matrix} \frac{1}{σ_{1}^2}&0&\cdots&0 \\ 
+0&\frac{1}{σ_{2}^2}&\cdots&0 \\ 
+\vdots&\cdots&\cdots&\vdots \\ 
+0&0&\cdots&\frac{1}{σ_{n}^2}  \end{matrix}\right] \tag{8}$$
 
 Its determinant is：
 
