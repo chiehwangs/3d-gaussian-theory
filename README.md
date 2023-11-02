@@ -78,7 +78,7 @@ $$f(z) = \frac{1}{(\sqrt{2π})^nσ_{z}}e^{-\frac{z^2}{2}} = \frac{1}{(\sqrt{2π}
 
 In the 3D Gaussian Splatting paper, the authors define the multivariate Gaussian function in world space using a 3D covariance matrix (refer to Equation 12, where the paper's Equation 4 omits $u$ and the preceding coefficients):
 
-$$G(x) = e^{-\frac{ (x\  -\  μ)^\mathrm{T}\  (\sum_{}{})^{-1}\  (x\  -\  μ)}{2}} \tag{12}$$
+$$G(x) = e^{-\frac{ (x\  -\  μ)^\mathrm{T}\  (\sum_{}{})^{-1}\  (x\  -\  μ)}{2}} \tag{13}$$
 
 In the context of the 3D Gaussian Splatting paper, this 3D Gaussian is one of the optimization targets (parameters $u$ and $Σ$), corresponding to the 3D Gaussian position and anisotropic covariance. It represents a 3D Gaussian function with the center at $u$ and variances in the x, y, and z directions equal to the diagonal elements of $Σ$. To visually understand this, here we use Python to draw a 2D Gaussian with the center at (1, 2) and a covariance matrix of [[1, 0], [0, 2]] (the vertical axis represents the probability density with $u$ and $Σ$ substituted).
 
@@ -86,7 +86,7 @@ In the context of the 3D Gaussian Splatting paper, this 3D Gaussian is one of th
 
 In order to complete the process of rasterization from 3D to 2D images after obtaining the 3D Gaussian, a transformation matrix from world to camera space, denoted as $W$, and a mapping matrix from camera to screen space, denoted as $P$, are required. In the paper, the authors use $J$ to represent the Jacobian matrix of the mapping matrix $P$. At this point, the covariance matrix $\sum{'}{}$ on the 2D plane for this 3D Gaussian can be represented as:
 
-$$\sum{'}{} = JW \sum W^\mathrm{T}J^\mathrm{T} \tag{13}$$
+$$\sum{'}{} = JW \sum W^\mathrm{T}J^\mathrm{T} \tag{14}$$
 
 The covariance matrix has several important properties:
 
@@ -109,13 +109,13 @@ $$Q = \begin{bmatrix}
 m_{11} & m_{12} & m_{13} \\
 m_{21} & m_{22} & m_{23} \\
 m_{31} & m_{32} & m_{33} \\
-\end{bmatrix} \tag{14}$$
+\end{bmatrix} \tag{15}$$
 
 Reference《Real Time Rendering 3rd edition》：
 
 $$\begin{aligned}m_{32}-m_{23}&=(2yz+2xw)-(2yz-2xw)=4xw \\
 m_{13}-m_{31}&=(2xz+2yw)-(2xz-2yw)=4yw \\
-m_{21}-m_{12}&=(2xy+2zw)-(2xy-2zw)=4zw\end{aligned} \tag{15}$$
+m_{21}-m_{12}&=(2xy+2zw)-(2xy-2zw)=4zw\end{aligned} \tag{16}$$
 
 The trace of the rotation matrix $Q$ is given by $tr(Q) = m_{11} + m_{22} + m_{33}$, and based on the equation above, it can be derived that $tr(Q) = 4w^{2} - 1$, therefore, the quaternion $l = (w,x,y,z)$ obtained from the rotation matrix $Q$ is as follows:
 
