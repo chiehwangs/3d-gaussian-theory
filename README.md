@@ -124,7 +124,7 @@ w=\frac{\sqrt{(tr(Q)+1}}{2} \\
 x=\frac{m_{32}-m_{23}}{4w} \\
 y=\frac{m_{13}-m_{31}}{4w} \\
 z=\frac{m_{21}-m_{12}}{4w} 
-\end{gathered} \tag{16}$$
+\end{gathered} \tag{17}$$
 
 ---
 
@@ -144,7 +144,7 @@ $$L = \begin{bmatrix}
 a & 0 & 0 \\
 0 & b & 0 \\
 0& 0 & c \\
-\end{bmatrix} \tag{17}$$
+\end{bmatrix} \tag{18}$$
 
 Normalize the quaternion r to represent it as q：
 
@@ -157,18 +157,18 @@ $$R = \begin{bmatrix}
 1-2(y'^{2}+z'^{2}) & 2(x'y'-w'z') & 2(x'z'+w'y') \\
 2(x'y'+w'z') & 1-2(x'^{2}+z'^{2}) & 2(y'z'-w'x') \\
 2(x'z'-w'y') & 2(y'z'+w'x') & 1-2(x'^{2}+y'^{2}) \\
-\end{bmatrix} \tag{18}$$
+\end{bmatrix} \tag{19}$$
 
 Covariance matrix
 
-$$\sum = RL(RL)^\mathrm{T} = RLL^\mathrm{T}R^\mathrm{T} \tag{19}$$
+$$\sum = RL(RL)^\mathrm{T} = RLL^\mathrm{T}R^\mathrm{T} \tag{20}$$
 
 Only the upper six elements of $Σ$ need to be retained.
 
 
 Up to this point, we have learned about the relationship between the covariance matrix, scaling factors, rotation quaternion, and rotation matrix. This allows us to combine all the information in $Σ$ (with $S$ and $R$ initialized as 0 in the paper and optimized during the iteration process) to complete the rasterization process. The formula provided in the paper is as follows, replacing $L$ in Equation (19) with $S$：
 
-$$\sum = RSS^{T}R^{T} \tag{20}$$
+$$\sum = RSS^{T}R^{T} \tag{21}$$
 
 During the backpropagation process, it is necessary to obtain the gradients of $Σ$ with respect to the scaling factors and rotation quaternion, which are provided in the appendix of the paper.
 
