@@ -16,7 +16,7 @@ Here, $\sigma$ represents the variance of the Gaussian function, and $\mu$ repre
 
 We consider $n$ independent variables, each following a normal distribution and being mutually uncorrelated, represented as :
 
-$$x = \left[ \begin{matrix} x_{1}, x_{2},\cdots,x_{n}\end{matrix}\right]^\mathrm{T}$$,
+$$x = \left[ \begin{matrix} x_{1}, x_{2},\cdots,x_{n}\end{matrix}\right]^\mathrm{T}$$
 
 with a mean of :
 
