@@ -81,13 +81,14 @@ m_{31} & m_{32} & m_{33} \\
 Reference《Real Time Rendering 3rd edition》：
 $$\begin{aligned}m_{32}-m_{23}&=(2yz+2xw)-(2yz-2xw)=4xw\\m_{13}-m_{31}&=(2xz+2yw)-(2xz-2yw)=4yw\\m_{21}-m_{12}&=(2xy+2zw)-(2xy-2zw)=4zw\end{aligned} \tag{15}$$
 
-The trace of the rotation matrix $Q$ is given by $tr(Q) = m_{11} + m_{22} + m_{33}$, and based on the equation above, it can be derived that $tr(Q) = 4w^{2} - 1$. Therefore, the quaternion $l = (w, x, y, z)$ obtained from the rotation matrix $Q$ is:
-$$\begin{gathered}
+The trace of the rotation matrix $Q$ is given by $tr(Q) = m_{11} + m_{22} + m_{33}$, and based on the equation above, it can be derived that $tr(Q) = 4w^{2} - 1$, therefore, the quaternion $l = (w,x,y,z)$ obtained from the rotation matrix $Q$ is as follows:
+$$\begin{gathered} \\
 w=\frac{\sqrt{(tr(Q)+1}}{2} \\
 x=\frac{m_{32}-m_{23}}{4w} \\
 y=\frac{m_{13}-m_{31}}{4w} \\
 z=\frac{m_{21}-m_{12}}{4w} 
 \end{gathered} \tag{16}$$
+
 ---
 
 In the 3D Gaussian Splatting paper, the calculation from scaling factors $s=(a, b, c)$ and rotation quaternion $r=(w, x, y, z)$ to the covariance matrix is defined in the function `build_covariance_from_scaling_rotation()`:
