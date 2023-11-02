@@ -38,7 +38,7 @@ And $z^2$ can be represented as $z^\mathrm{T}z$, decomposed into vector notation
 
 $$z^2 = z^\mathrm{T}z = \left[ \begin{matrix} x_{1} - μ_{1}, x_{2} - μ_{2}, \cdots,x_{n} - μ_{n}\end{matrix}\right] \left[ \begin{matrix} \frac{1}{σ_{1}^2}&0&\cdots&0\\ 0&\frac{1}{σ_{2}^2}&\cdots&0\\ \vdots&\cdots&\cdots&\vdots\\ 0&0&\cdots&\frac{1}{σ_{n}^2}  \end{matrix}\right]\left[ \begin{matrix} x_{1} - μ_{1}, x_{2} - μ_{2}, \cdots,x_{n} - μ_{n}\end{matrix}\right]^\mathrm{T} \tag{5}$$
 
-$x - μ_{x}$ can be represented as $x - μ_{x} = \left[ \begin{matrix} x_{1} - μ_{1}, x_{2} - μ_{2}, \cdots,x_{n} - μ_{n}\end{matrix}\right]^\mathrm{T}$, and at this point, $z^2$ can be represented as:
+$x - μ_{x}$ can be represented as $x - μ_{x} = \left[ \begin{matrix} x_{1} - μ_{1}, x_{2} - μ_{2}, \cdots,x_{n} - μ_{n}\end{matrix}\right]^\mathrm{T}$ , and at this point, $z^2$ can be represented as:
 
 $$[x - μ_{x}]^\mathrm{T}\left[ \begin{matrix} \frac{1}{σ_{1}^2}&0&\cdots&0\\ 0&\frac{1}{σ_{2}^2}&\cdots&0\\ \vdots&\cdots&\cdots&\vdots\\ 0&0&\cdots&\frac{1}{σ_{n}^2}  \end{matrix}\right][x - μ_{x}] \tag{6}$$
 
