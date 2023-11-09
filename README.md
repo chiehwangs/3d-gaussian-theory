@@ -2,7 +2,7 @@
 
 Another comprehensive repository, you might need it：[awesome-3D-gaussian-splatting](https://github.com/MrNeRF/awesome-3D-gaussian-splatting)
 
-A theoretical derivation about 3D Gaussian splatting \textbf{rasterization} will be added soon...
+A theoretical derivation about 3D Gaussian Splatting \textbf{Rasterization} will be added soon...
 
 ## Theoretical derivation：
 
