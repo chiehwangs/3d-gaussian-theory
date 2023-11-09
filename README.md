@@ -2,6 +2,8 @@
 
 Another comprehensive repository, you might need it：[awesome-3D-gaussian-splatting](https://github.com/MrNeRF/awesome-3D-gaussian-splatting)
 
+A theoretical derivation about 3D Gaussian splatting \textbf{rasterization} will be added soon...
+
 ## Theoretical derivation：
 
 First, let's start by understanding the standard unit Gaussian function, which represents a function with a mean of $\mu$ and a variance of $\sigma$ equal to 1, where the sum of its probability density is 1：
