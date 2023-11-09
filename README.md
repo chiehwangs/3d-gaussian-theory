@@ -177,5 +177,3 @@ During the backpropagation process, it is necessary to obtain the gradients of $
 >- [3D Gaussian Splatting for Real-Time Radiance Field Rendering](https://github.com/graphdeco-inria/gaussian-splatting)
 
 >- [The Multivariate normal distribution](https://www.cnblogs.com/bingjianing/p/9117330.html)
-
->- [《3D数学基础：图形与游戏开发》]()
