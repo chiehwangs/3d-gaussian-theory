@@ -8,6 +8,7 @@ First, let's start by understanding the standard unit Gaussian function, which r
 $$f(x) = \frac{1}{\sqrt{2π}}e^{-\frac{x^2}{2}} \tag{1}$$
 
 ![](assets/gaussian_distri.png)
+
 Now, we do not constrain the mean and variance and express them in a general form:
 
 $$f(x) = \frac{1}{\sqrt{2π}σ}e^{-\frac{(x-μ)^2}{2σ^{2}}} \tag{2}$$
