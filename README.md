@@ -2,9 +2,9 @@
 
 Another comprehensive repository, you might need it：[awesome-3D-gaussian-splatting](https://github.com/MrNeRF/awesome-3D-gaussian-splatting)
 
-coming soon:
+Coming soon:
 
-:bookmark_tabs: A theoretical derivation about 3D Gaussian Splatting Rasterization will be added soon...
+:bookmark_tabs: A theoretical of <ins>**3D Gaussian Splatting Rasterization**</ins> will be added soon...
 
 ## Theoretical derivation：
 
