@@ -2,7 +2,7 @@
 
 Another comprehensive repository, you might need it：[awesome-3D-gaussian-splatting](https://github.com/MrNeRF/awesome-3D-gaussian-splatting)
 
-Coming soon:
+## Coming soon:
 
 :bookmark_tabs: A theoretical of <ins>**3D Gaussian Splatting Rasterization**</ins> will be added soon...
 
