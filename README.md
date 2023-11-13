@@ -81,7 +81,10 @@ Substitute this into the multivariate normal Gaussian distribution function (4) 
 
 $$f(z) = \frac{1}{(\sqrt{2π})^nσ_{z}}e^{-\frac{z^2}{2}} = \frac{1}{(\sqrt{2π})^{n}\left|∑_{}^{}\right|^\frac{1}{2}}e^{-\frac{ (x\  -\  μ_{x})^\mathrm{T}\  (\sum_{}{})^{-1}\  (x\  -\  μ_{x})}{2}} \tag{12}$$
 
-The authors use the product of formula (12) and $opacity$ to calculate $alpha$ (used for rasterization), the variable $x$ represents the pixel position, and $u_x$ denotes the 2D Gaussian center position that influences x.
+The authors use the product of formula (12) (PDF) and $opacity$ to calculate $alpha$ , the variable $x$ represents the pixel position, and $u_x$ denotes the 2D Gaussian center position that influences $x$.
+ The further away from the 2D Gaussian center $u_x$, the smaller the alpha. The alpha of the Gaussian area above pixel $x$ is $\alpha_2$, note that the color of pixel $x$ is: $C_x = c_1\alpha_1 + c_2\alpha_2 + ...$, $c_1$ is the rgb of 2D gaussian which is nearest to pixel $x$, $\alpha_1$ is the alpha value of the area above pixel $x$ in 2D Gaussian.
+
+![](assets/gaussian_rander.png)
 
 In the 3D Gaussian Splatting paper, the authors define the multivariate Gaussian function in world space using a 3D covariance matrix (refer to Equation 12, where the paper's Equation 4 omits $u$ and the preceding coefficients):
 
