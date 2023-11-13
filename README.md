@@ -81,6 +81,8 @@ Substitute this into the multivariate normal Gaussian distribution function (4) 
 
 $$f(z) = \frac{1}{(\sqrt{2π})^nσ_{z}}e^{-\frac{z^2}{2}} = \frac{1}{(\sqrt{2π})^{n}\left|∑_{}^{}\right|^\frac{1}{2}}e^{-\frac{ (x\  -\  μ_{x})^\mathrm{T}\  (\sum_{}{})^{-1}\  (x\  -\  μ_{x})}{2}} \tag{12}$$
 
+The authors use the product of formula (12) and $opacity$ to calculate $alpha$ (used for rasterization), the variable $x$ represents the pixel position, and $u_x$ denotes the 2D Gaussian center position that influences x.
+
 In the 3D Gaussian Splatting paper, the authors define the multivariate Gaussian function in world space using a 3D covariance matrix (refer to Equation 12, where the paper's Equation 4 omits $u$ and the preceding coefficients):
 
 $$G(x) = e^{-\frac{ (x\  -\  μ)^\mathrm{T}\  (\sum_{}{})^{-1}\  (x\  -\  μ)}{2}} \tag{13}$$
