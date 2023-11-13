@@ -11,7 +11,7 @@ Another comprehensive repository, you might need it：[awesome-3D-gaussian-splat
 First, let's start by understanding the standard unit Gaussian function, which represents a function with a mean of $\mu$ and a variance of $\sigma$ equal to 1, where the sum of its probability density is 1：
 $$f(x) = \frac{1}{\sqrt{2π}}e^{-\frac{x^2}{2}} \tag{1}$$
 
-![](assets/gaussian_distri.png)
+<div align=center><img src="assets/gaussian_distri.png" width="500"></div>
 
 Now, we do not constrain the mean and variance and express them in a general form:
 
@@ -83,8 +83,8 @@ $$f(z) = \frac{1}{(\sqrt{2π})^nσ_{z}}e^{-\frac{z^2}{2}} = \frac{1}{(\sqrt{2π}
 
 The authors use the product of formula (12) (PDF) and $opacity$ to calculate $alpha$ , the variable $x$ represents the pixel position, and $u_x$ denotes the 2D Gaussian center position that influences $x$.
  The further away from the 2D Gaussian center $u_x$, the smaller the alpha. The alpha of the Gaussian area above pixel $x$ is $\alpha_2$, note that the color of pixel $x$ is: $C_x = c_1\alpha_1 + c_2\alpha_2 + ...$, $c_1$ is the rgb of 2D gaussian which is nearest to pixel $x$, $\alpha_1$ is the alpha value of the area above pixel $x$ in 2D Gaussian.
-
-![](assets/gaussian_rander.png)
+ 
+<div align=center><img src="assets/gaussian_rander.png" width="500"></div>
 
 In the 3D Gaussian Splatting paper, the authors define the multivariate Gaussian function in world space using a 3D covariance matrix (refer to Equation 12, where the paper's Equation 4 omits $u$ and the preceding coefficients):
 
@@ -92,7 +92,7 @@ $$G(x) = e^{-\frac{ (x\  -\  μ)^\mathrm{T}\  (\sum_{}{})^{-1}\  (x\  -\  μ)}{2
 
 In the context of the 3D Gaussian Splatting paper, this 3D Gaussian is one of the optimization targets (parameters $u$ and $Σ$), corresponding to the 3D Gaussian position and anisotropic covariance. It represents a 3D Gaussian function with the center at $u$ and variances in the x, y, and z directions equal to the diagonal elements of $Σ$. To visually understand this, here we use Python to draw a 2D Gaussian with the center at (1, 2) and a covariance matrix of [[1, 0], [0, 2]] (the vertical axis represents the probability density with $u$ and $Σ$ substituted).
 
-![](assets/2Dgaussian.png)
+<div align=center><img src="assets/2Dgaussian.png" width="500"></div>
 
 In order to complete the process of rasterization from 3D to 2D images after obtaining the 3D Gaussian, a transformation matrix from world to camera space, denoted as $W$, and a mapping matrix from camera to screen space, denoted as $P$, are required. In the paper, the authors use $J$ to represent the Jacobian matrix of the mapping matrix $P$. At this point, the covariance matrix $\sum{'}{}$ on the 2D plane for this 3D Gaussian can be represented as:
 
