@@ -1,4 +1,4 @@
-# A repository on how to understand the theory of 3D Gaussians Splatting
+# A repository on how to understand the partial theory of 3D Gaussians Splatting
 
 Another comprehensive repository, you might need it：[awesome-3D-gaussian-splatting](https://github.com/MrNeRF/awesome-3D-gaussian-splatting)
 
