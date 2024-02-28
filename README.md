@@ -8,7 +8,7 @@ Another comprehensive repository, you might need it：[awesome-3D-gaussian-splat
 
 ## Theoretical derivation：
 
-First, let's start by understanding the standard unit Gaussian function, which represents a function with a mean of $\mu$ and a variance of $\sigma$ equal to 1, where the sum of its probability density is 1：
+First, let's start by understanding the standard unit Gaussian function, which represents a function with a mean of $\mu$ $= 0$ and a variance of $\sigma$ equal to 1, where the sum of its probability density is 1：
 $$f(x) = \frac{1}{\sqrt{2π}}e^{-\frac{x^2}{2}} \tag{1}$$
 
 <div align=center><img src="assets/gaussian_distri.png" width="500"></div>
