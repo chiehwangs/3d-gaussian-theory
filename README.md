@@ -4,7 +4,7 @@ Another comprehensive repository, you might need it：[awesome-3D-gaussian-splat
 
 ## Coming soon:
 
-:bookmark_tabs: A theoretical of <ins>**3D Gaussian Splatting Rasterization**</ins> will be added soon...
+~~:bookmark_tabs: A theoretical of <ins>**3D Gaussian Splatting Rasterization**</ins> will be added soon...~~
 
 ## Theoretical derivation：
 
